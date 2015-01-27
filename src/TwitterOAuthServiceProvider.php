@@ -33,9 +33,9 @@ class TwitterOAuthServiceProvider extends ServiceProvider {
         
         $app['twitteroauth'] = $app->share(function ($app) {
             return new \Abraham\TwitterOAuth\TwitterOAuth(
-            	$app['config']->get('twitteroauth::CONSUMER_KEY'),
-            	$app['config']->get('twitteroauth::CONSUMER_SECRET'),
-            	$app['config']->get('twitteroauth::ACCESS_TOKEN'),
+            	$app['config']->get('twitteroauth::CONSUMER_KEY'), 
+            	$app['config']->get('twitteroauth::CONSUMER_SECRET'), 
+            	$app['config']->get('twitteroauth::ACCESS_TOKEN'), 
             	$app['config']->get('twitteroauth::ACCESS_TOKEN_SECRET')
             );
         });
